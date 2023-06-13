@@ -16,7 +16,7 @@ connection();
 app.use(express.json());
 app.use(cors(
     {
-        origin:["https://tax-portal-frontend.vercel.app/"],
+        origin:["https://tax-portal-frontend.vercel.app"],
         methods:["POST","GET"],
         credentials:true
     }
