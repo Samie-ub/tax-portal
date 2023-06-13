@@ -1,0 +1,95 @@
+.contact-top-container {
+  padding-top: 8rem;
+}
+.contact-p-main {
+  color: #2a7cc7;
+  font-size: 1rem;
+  font-weight: 600;
+  padding-top: 10px;
+}
+.contact-p-one {
+  color: #243e63;
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 1rem;
+}
+.contact-p-span {
+  color: #2a7cc7;
+  font-size: 3rem;
+  font-weight: 800;
+}
+.contact-p-two {
+  color: #7c8ba1;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.input-field {
+  width: 80%;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #7c8ba1;
+  padding: 10px 0;
+  background: transparent;
+  font-size: 1em;
+  color: #000000;
+  transition: 0.3s ease;
+  margin: 1rem 0;
+}
+.input-field::placeholder {
+  color: #787e86;
+}
+.input-field::placeholder-show ~ {
+  font-size: 1em;
+  top: 20px;
+}
+.textarea {
+  width: 80%;
+  outline: 0;
+  border: 0;
+  border-bottom: 2px solid #7c8ba1;
+  /* padding: 10px 0; */
+  background: transparent;
+  font-size: 1em;
+  color: #000000;
+  transition: 0.3s ease;
+  margin: 1rem 0;
+}
+.contact-btton {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin: 1rem 0;
+}
+.contact-btton-one {
+  width: 80%;
+  border: none;
+  background-color: #2a7cc7;
+  color: #fff;
+  padding: 1rem 0;
+  border-radius: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.contact-btton-one:hover {
+  background-color: #4577a5;
+  transition: 0.5;
+}
+/* contact location start here */
+.locaton_main{
+    padding: 3rem 0;
+}
+.location_h3 {
+  padding-top: 0.1rem;
+  color: #243e63;
+  padding-bottom: 1rem;
+}
+.location_para {
+  color: #4f5e72;
+  padding-bottom: 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.location_text {
+  color: #a9aec0;
+}
