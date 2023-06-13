@@ -9,6 +9,7 @@ const userFormRoute = require("./routes/userForm")
 const passwordResetRoutes = require("./routes/passwordReset");
 
 // database connection
+
 connection();
 
 // middlewares
