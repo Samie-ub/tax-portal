@@ -14,7 +14,13 @@ connection();
 
 // middlewares
 app.use(express.json());
-app.use(cors())
+app.use(cors(
+    {
+        origin:["https://tax-portal-frontend.vercel.app"],
+        methods:["POST","GET"],
+        credentials:true
+    }
+));
 
 // routes
 app.use("/api/users", userRoutes);
