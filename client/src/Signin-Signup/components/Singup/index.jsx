@@ -10,6 +10,7 @@ const Signup = () => {
 		email: "",
 		password: "",
 	});
+	axios.defaults.withCredentials = true;
 	const [error, setError] = useState("");
 	const [msg, setMsg] = useState("");
 
@@ -20,7 +21,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/users";
+			const url = "https://tax-portal-backend.vercel.app/api/users";
 			const { data: res } = await axios.post(url, data);
 			setMsg(res.message);
 		} catch (error) {
