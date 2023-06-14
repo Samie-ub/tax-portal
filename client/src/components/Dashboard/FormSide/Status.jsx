@@ -9,10 +9,11 @@ import DigitalAssets from './DigitalAssets'
 import axios from "axios";
 
 function Status() {
+	 axios.defaults.withCredentials = true;
   const [formStep, setFormStep] = useState(1);
   console.log("======>",formStep)
   const { dispatch } = useFormContext();
-  axios.defaults.withCredentials = true;
+ 
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
   const [ssn, setSsn] = useState();
