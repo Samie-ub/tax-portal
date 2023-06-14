@@ -1161,12 +1161,15 @@ function Status() {
                 />
               </Grid>
             </Grid>
+<div className="center">
+           <button className="next_btn" onClick={handleSubmitForm}>
+        submit
+      </button>
+          </div>
           </div>
         </>
       )}
-      <button className="next_btn" onClick={handleSubmitForm}>
-        submit
-      </button>
+      
     </>
   );
 }
