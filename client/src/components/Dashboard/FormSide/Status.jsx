@@ -6,11 +6,13 @@ import StandardOne from "./StandardOne";
 import "../Dashboard.css";
 import DependentOne from "./DependentOne";
 import DigitalAssets from './DigitalAssets'
+import axios from "axios";
 
 function Status() {
   const [formStep, setFormStep] = useState(1);
   console.log("======>",formStep)
   const { dispatch } = useFormContext();
+  axios.defaults.withCredentials = true;
   const [firstName, setFirstName] = useState("");
   const [middleName, setMiddleName] = useState("");
   const [ssn, setSsn] = useState();
