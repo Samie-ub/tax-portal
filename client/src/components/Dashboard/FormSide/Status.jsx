@@ -192,34 +192,24 @@ function Status() {
     };
     console.log(forms);
 
-    const response = await fetch("https://tax-portal-backend.vercel.app/api/userform", {
-      method: "POST",
-      body: JSON.stringify(forms),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
+   try {
+			const url = "http://localhost:8080/api/userform";
+			const response= await axios.post(url, forms);
+      if(response.status == 200 || response.status==201){
+        window.location.reload();
 
-    const json = await response.json();
-
-    if (!response.ok) {
-      setError(json.error);
-      setEmptyFields(json.emptyFields);
-    }
-
-    if (response.ok) {
-      setFirstName("");
-      setMiddleName("");
-      setSsn();
-      setSsnTwo();
-      setSsnThree();
-      setDob("");
-      setOccupation("");
-      setError(null);
-      setEmptyFields([]);
-      console.log("new Form added", json);
-      dispatch({ type: "CREATE_WORKOUT", payload: json });
-    }
+      }
+      
+		} catch (error) {
+			if (
+       
+				error.response &&
+				error.response.status >= 400 &&
+				error.response.status <= 500
+			) {
+				setError(error.response.data.message);
+			}
+		}
   };
 
   return (
