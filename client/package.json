@@ -1,7 +1,7 @@
 {
   "name": "tax-portal",
   "version": "0.1.0",
-  "proxy": "http://localhost:8080",
+  "proxy": "https://tax-portal-backend.vercel.app/",
   "private": false,
   "dependencies": {
     "@mui/icons-material": "^5.11.11",
