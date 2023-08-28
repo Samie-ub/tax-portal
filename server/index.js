@@ -16,11 +16,9 @@ connection();
 // middlewares
 app.use(express.json());
 const corsOpts = {
-    origin: '*',
-    credentials: true,
-    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
-    allowedHeaders: ['Content-Type'],
-    exposedHeaders: ['Content-Type']
+    origin: 'https://tax-portal-frontend.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 };
 app.use(cors(corsOpts));
 
