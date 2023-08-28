@@ -2,45 +2,14 @@
   background-color: #2a7cc74d;
   padding: 0 3rem 7px;
   height: 100vh;
-
+}
+.status_main {
+  padding: 0 3rem 7px;
 }
 
-
-
-/* Dropdown */
-.dropdown-container {
-  position: relative;
-}
-
-.dd_btn {
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  background-color: transparent;
-}
-
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #f9f9f9;
-  border: 1px solid #ccc;
-  border-top: none;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  z-index: 9 !important;
-}
-
-.dropdown-menu li {
-  padding: 10px;
-  cursor: pointer;
-}
-
-.dropdown-menu li:hover {
-  background-color: #ddd;
+.align {
+  display: flex;
+  align-items: center;
 }
 
 /* Sidebar  */
@@ -74,6 +43,11 @@
   color: #fff;
 }
 
+.selected {
+  background-color: #2a7cc7;
+  color: #fff !important;
+}
+
 .logout {
   display: flex;
   align-items: center;
@@ -83,6 +57,7 @@
   align-self: flex-end;
   margin-top: 8rem;
   text-transform: capitalize;
+  cursor: pointer;
 }
 
 /* Form  */
@@ -91,7 +66,7 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem 3rem;
-  margin-top: 6.5rem;
+  margin-top: 7.1rem;
 }
 
 .form_header {
@@ -133,6 +108,26 @@
   width: 20px;
 }
 
+.form_validation_p {
+  font-size: 2.5rem;
+  font-weight: 650;
+  color: #243e63;
+}
+.form_validation_span {
+  font-size: 2rem;
+  font-weight: 450;
+  color: #243e63;
+}
+.form_validation_img {
+  width: 100%;
+  margin: 0 auto;
+}
+.form_validation_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .next_btn {
   padding: 0.8rem 5rem;
   border: none;
@@ -142,13 +137,21 @@
   font-size: 0.8rem;
   text-transform: uppercase;
   border-radius: 10px;
-  margin: 0 10px;
+  margin: 10px 10px;
   cursor: pointer;
 }
 
-.next_btn:hover {
-  background-color: #2a8ae4;
-  transition: 0.1s ease-in-out;
+.grayButton {
+  padding: 0.8rem 5rem;
+  border: none;
+  background-color: #5b5d5e;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  border-radius: 10px;
+  margin: 10px 10px;
+  cursor: pointer;
 }
 
 .center {
@@ -241,14 +244,24 @@
 
 .status_form_main {
   padding-top: 7.7rem;
-  background-color: #fff;
 }
 
 .status_heading h1 {
   font-size: 1.5rem;
   text-align: center;
 }
-
+.row {
+  display: flex;
+  align-items: center;
+}
+.taxform_row {
+  display: flex;
+  align-items: center;
+}
+.zip_container {
+  display: flex;
+  align-items: center;
+}
 .status_heading p {
   text-decoration: underline;
   line-height: 20px;
@@ -265,6 +278,9 @@ hr {
   display: flex;
   flex-direction: column;
 }
+.status_form input {
+  width: 100%;
+}
 
 .status_form label {
   margin-bottom: 0;
@@ -276,7 +292,6 @@ hr {
   border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
-  width: 30%;
   margin-bottom: 10px;
 }
 
@@ -284,9 +299,11 @@ hr {
   border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
-  width: 15%;
+  /* width: 15%; */
 }
-
+.center {
+  margin-bottom: 0.5rem;
+}
 .staus_form_two {
   padding-top: 1rem;
 }
@@ -294,7 +311,10 @@ hr {
   display: flex;
   align-items: center;
 }
-
+.status-checkbox {
+  height: 25px;
+  width: 25px;
+}
 .status_heading_blue {
   color: #2a7cc7;
   font-size: 3rem;
@@ -374,7 +394,7 @@ hr {
   margin-bottom: 5px;
   cursor: pointer;
 }
-.depend_tabel .disabled-input{
+.depend_tabel .disabled-input {
   border: 2px solid #ccc;
 }
 table tr th {
@@ -396,7 +416,7 @@ table tr th {
   margin-bottom: 5px;
   cursor: pointer;
 }
-.depend_tabel_last .disabled-input{
+.depend_tabel_last .disabled-input {
   border: 2px solid #ccc;
 }
 .depend_tabel_last tr th {
@@ -415,37 +435,35 @@ table tr th {
   color: #2a7cc7;
 }
 .income_text {
-  display: flex;
-  flex-direction: column !important;
-  justify-content: center;
-  align-items: center;
   text-align: start;
-}
-.income_text label {
-  text-align: start;
-  font-size: 1.3rem;
+  font-size: 1rem;
   color: #2a7cc7;
   font-weight: 500;
   padding: 0;
+  padding-bottom: 10px;
 }
 .income_text input {
   border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
-  width: 80%;
+  width: 100%;
 }
 .income_three_container label {
   text-align: start;
   font-size: 1rem;
   color: #2a7cc7;
   font-weight: 500;
-  padding: 0;
+  /* padding: 0; */
+  padding-bottom: 15px;
 }
 .income_three_container input {
   border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
   width: 100%;
+}
+.income-box-top {
+  padding-bottom: 1rem;
 }
 /* tax form start css  */
 
@@ -478,6 +496,9 @@ table tr th {
   font-weight: 500;
   padding-left: 1em;
 }
+.payment_form {
+  padding-top: 2rem;
+}
 .payment_text label {
   text-align: start;
   font-size: 1.2rem;
@@ -494,6 +515,7 @@ table tr th {
 /* refund form start css  */
 .refund_cont {
   gap: 20px;
+  padding: 1rem 0;
 }
 .refund_cont label {
   text-align: start;
@@ -552,7 +574,9 @@ table tr th {
   font-weight: 500;
 }
 /* form_sign form start css  */
-
+.sign-padding {
+  padding: 1rem 0;
+}
 .form_sign_color label {
   text-align: start;
   font-size: 1.1rem;
@@ -565,7 +589,7 @@ table tr th {
   border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
-  width: 60%;
+  width: 100%;
   margin-top: 1.5rem;
 }
 .sing_form_line {
@@ -587,7 +611,10 @@ table tr th {
   border: 2px solid #2a7cc7;
   border-radius: 3px;
   padding: 10px;
-  width: 70%;
+  width: 90%;
+}
+.paid_chkbox {
+  padding: 1rem 0;
 }
 .paid_chkbox label {
   text-align: center;
@@ -616,27 +643,26 @@ table tr th {
   padding-top: 1rem;
 }
 
-@media screen and (max-width: 965px){
-  .dashboard_main{
+@media screen and (max-width: 965px) {
+  .dashboard_main {
     padding: 0 0 0 0;
   }
 
- .sidebar_main{
-  display: none;
- }
+  .sidebar_main {
+    display: none;
+  }
 
- .form_sidebar_main{
-  display: none;
- }
- .form_main{
-  padding: 1rem;
- }
-  
+  .form_sidebar_main {
+    display: none;
+  }
+  .form_main {
+    padding: 1rem;
+  }
 }
 .account-form-p {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2A7CC7;
+  color: #2a7cc7;
   padding-top: 1rem;
   text-decoration: underline;
   padding-bottom: 1rem;
@@ -648,7 +674,7 @@ table tr th {
   margin-top: 7.3rem;
 }
 .account_form_main input {
-  border: 2px solid #2A7CC7;
+  border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
   width: 100%;
@@ -659,7 +685,7 @@ table tr th {
 }
 .acount-form-button-one {
   border: none;
-  background-color: #2A7CC7;
+  background-color: #2a7cc7;
   padding: 8px 30px;
   color: #fff;
   border-radius: 5px;
@@ -682,17 +708,7 @@ table tr th {
   height: 10vh;
   border-radius: 50px;
 }
-main form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border: 2px dashed #1475;
-  height: 150px;
-  width: 150px;
-  cursor: pointer;
-  border-radius: 10px;
-}
+
 .upload-p {
   text-align: center;
 }
@@ -703,13 +719,13 @@ main form {
   margin-top: 7.5rem;
 }
 .setting_heading {
-  color: #A8ABAE;
+  color: #a8abae;
   font-size: 1rem;
   font-weight: 500;
   padding-bottom: 2rem;
 }
 .setting_form_main input {
-  border: 2px solid #2A7CC7;
+  border: 2px solid #2a7cc7;
   padding: 8px;
   width: 100%;
   margin-bottom: 2rem;
@@ -730,7 +746,7 @@ main form {
   margin-top: 7.5rem;
 }
 .support_form_main input {
-  border: 2px solid #2A7CC7;
+  border: 2px solid #2a7cc7;
   border-radius: 8px;
   padding: 8px;
   width: 100%;
@@ -741,6 +757,14 @@ main form {
 }
 .support_form_main hr {
   width: 100%;
-  border: 1px solid #2A7CC7;
+  border: 1px solid #2a7cc7;
   margin-top: 2rem;
+}
+.icome_heading {
+  padding-bottom: 2rem;
+}
+@media only screen and (max-width: 1354px) {
+  .tabel_container {
+    flex-wrap: wrap;
+  }
 }

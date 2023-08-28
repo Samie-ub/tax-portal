@@ -36,12 +36,10 @@ router.post("/", async (req, res) => {
     const verificationUrl = `${process.env.BASE_URL}users/${user._id}/verify/${token.token}`;
     await sendEmail(user.email, "Verify Email", verificationUrl);
 
-    res
-      .status(201)
-      .send({
-        message:
-          "An email has been sent to your account. Please verify your email.",
-      });
+    res.status(201).send({
+      message:
+        "An email has been sent to your account. Please verify your email.",
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send({ message: "Internal Server Error" });
@@ -72,6 +70,6 @@ router.get("/:id/verify/:token", async (req, res) => {
     console.log(error);
     res.status(500).send({ message: "Internal Server Error" });
   }
-}); 
+});
 
 module.exports = router;

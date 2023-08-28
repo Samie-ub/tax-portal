@@ -1,6 +1,10 @@
 .about_container {
   padding-top: 8.5rem;
 }
+
+.text_align{
+  text-align: center;
+}
 .about_p {
   color: #2a7cc7;
   font-weight: 500;

@@ -7,7 +7,6 @@ import { Fragment } from "react";
 
 const EmailVerify = () => {
   const [validUrl, setValidUrl] = useState(false);
-  axios.defaults.withCredentials = true;
   const param = useParams();
   const navigate = useNavigate();
 

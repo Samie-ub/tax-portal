@@ -19,7 +19,7 @@
   padding: 1rem;
 }
 .bg-color-primary {
-  background-color: #2a7cc7;
+  background-color: #2A7CC7;
 }
 .bg-color-secondary {
   background-color: #bfd7ee;
@@ -59,6 +59,7 @@
   font-weight: 500;
   color: #ffffff;
 }
+
 .nav-button {
   border: none;
   padding: 10px 20px;
@@ -71,11 +72,11 @@
 @media screen and (max-width: 940px) {
   .header {
     max-width: 100%;
-    background-color: #2a7cc7;
+    background-color: #2A7CC7;
   }
   .header-dash {
     max-width: 100%;
-    background-color: #2a7cc7;
+    background-color: #2A7CC7;
   }
   .header .navbar {
     max-width: 100%;
@@ -102,8 +103,9 @@
     margin: 1.5rem 0;
   }
   .header .navbar img {
-    width: 150px;
+    width: 70px;
   }
+
 }
 .dash_nav {
   display: flex;

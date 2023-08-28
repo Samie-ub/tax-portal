@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 function DashSidebar() {
   const sidebarData = [
@@ -23,22 +23,19 @@ function DashSidebar() {
       step: 3,
     },
     {
-      icon: "./Assets/dashthree.png",
-      label: "notification",
-      Link: "/notification",
-
-      step: 4,
-    },
-    {
       icon: "./Assets/dashfour.png",
       label: "support",
       Link: "/support",
-
       step: 5,
     },
   ];
   const location = useLocation();
+  const navigate = useNavigate();
 
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
   return (
     <div className="sidebar_main">
       <div className="sidebar_box">
@@ -58,7 +55,7 @@ function DashSidebar() {
           );
         })}
 
-        <div className="logout">
+        <div className="logout" onClick={handleLogout}>
           <img src="./Assets/logout.png" width={20} alt="" />
           <span>log out</span>
         </div>

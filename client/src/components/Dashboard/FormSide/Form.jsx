@@ -1,21 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import DashboardNav from "../../Navbar/DashboardNav";
-import FormSidebar from "./FormSidebar";
 import Status from "./Status";
 import { Grid } from "@mui/material";
-
-function TaxForm() {
+import DashSidebar from "../DashSidebar";
+function Form() {
+  const [formStep, setFormStep] = useState(1);
 
   return (
-    <div className="outer_bg">
+    <div className="status_main">
       <DashboardNav />
+      <DashSidebar />
       <div className="tax_form_main">
         <Grid container justifyContent={"space-between"}>
-          <Grid item lg={1}>
-            <FormSidebar/>
-          </Grid>
+          <Grid item lg={1}></Grid>
           <Grid item lg={9.5}>
-            <Status />
+            <Status formStep={formStep} setFormStep={setFormStep} />
           </Grid>
         </Grid>
       </div>
@@ -23,4 +22,4 @@ function TaxForm() {
   );
 }
 
-export default TaxForm;
+export default Form;

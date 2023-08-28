@@ -5,12 +5,11 @@ import styles from "./styles.module.css";
 
 const Signup = () => {
 	const [data, setData] = useState({
-		firstName: "",
-		lastName: "",
+		fullName: "",
 		email: "",
+		phoneNumber: "",
 		password: "",
 	});
-	axios.defaults.withCredentials = true;
 	const [error, setError] = useState("");
 	const [msg, setMsg] = useState("");
 
@@ -21,8 +20,13 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
+			const phoneNumber = parseInt(data.phoneNumber);
+
 			const url = "https://tax-portal-backend.vercel.app/api/users";
-			const { data: res } = await axios.post(url, data);
+			const { data: res } = await axios.post(url, {
+				...data,
+				phoneNumber: phoneNumber,
+			});
 			setMsg(res.message);
 		} catch (error) {
 			if (
@@ -51,19 +55,10 @@ const Signup = () => {
 						<h1>Create Account</h1>
 						<input
 							type="text"
-							placeholder="First Name"
-							name="firstName"
+							placeholder="Full Name"
+							name="fullName"
 							onChange={handleChange}
-							value={data.firstName}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="text"
-							placeholder="Last Name"
-							name="lastName"
-							onChange={handleChange}
-							value={data.lastName}
+							value={data.fullName}
 							required
 							className={styles.input}
 						/>
@@ -73,6 +68,15 @@ const Signup = () => {
 							name="email"
 							onChange={handleChange}
 							value={data.email}
+							required
+							className={styles.input}
+						/>
+						<input
+							type="number"
+							placeholder="Phone Number"
+							name="phoneNumber"
+							onChange={handleChange}
+							value={data.phoneNumber}
 							required
 							className={styles.input}
 						/>

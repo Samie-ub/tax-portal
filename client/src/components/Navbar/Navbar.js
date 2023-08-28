@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="header bg-color-primary">
       <nav className="navbar">
         <a href="/" className="logo">
-          Tax Portal
+          <img src="./assets/logo.png" alt="" />
         </a>
         <div className="hamburger" onClick={handleClick}>
           {click ? (
@@ -22,6 +22,11 @@ const Navbar = () => {
         </div>
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
+            <a href="/" onClick={closeMenu}>
+              Home
+            </a>
+          </li>
+          <li className="nav-item">
             <a href="/about" onClick={closeMenu}>
               About
             </a>
@@ -29,11 +34,6 @@ const Navbar = () => {
           <li className="nav-item">
             <a href="/services" onClick={closeMenu}>
               Services
-            </a>
-          </li>
-          <li className="nav-item">
-            <a href="#testimonials" onClick={closeMenu}>
-              Help
             </a>
           </li>
           <li className="nav-item">

@@ -1,58 +1,99 @@
 import { Grid } from "@mui/material";
 import React, { useState } from "react";
-import { MdCloudUpload, MdDelete } from "react-icons/md";
-
+import axios from "axios";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function AccountForm() {
-  const [image, setImage] = useState(null);
-  const [fileName, setFileName] = useState("No selected file");
+  const initialData = {
+    fullName: "",
+    email: "",
+    phoneNumber: "",
+  };
+  const [data, setData] = useState(initialData);
+
+  const handleChange = ({ currentTarget: input }) => {
+    setData({ ...data, [input.name]: input.value });
+  };
+
+  const handleUpdateProfile = async (e) => {
+    e.preventDefault();
+    const token = localStorage.getItem("token");
+    try {
+      const phoneNumber = parseInt(data.phoneNumber);
+      const updatedData = {};
+      const areFieldsFilled = Object.values(updatedData).some((value) => value !== "");
+      if (data.fullName !== "") {
+        updatedData.fullName = data.fullName;
+      }
+      
+      if (data.email !== "") {
+        updatedData.email = data.email;
+      }
+      
+      if (data.phoneNumber !== "") {
+        updatedData.phoneNumber = data.phoneNumber;
+      }
+      const response = await axios.put(
+        "/api/account/update-account",
+         updatedData, 
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
+      setData(initialData);
+      toast.success("Account information updated successfully", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    } catch (error) {
+      console.error("Error updating account information:", error);
+      toast.error("there's a problem updating", {
+        position: toast.POSITION.TOP_RIGHT,
+      });
+    }
+  };
+
+  const handleReset = () => {
+    // Reset input fields
+    setData(initialData);
+  };
+
   return (
     <div className="account_form_main">
       <p className="account-form-p">Account Setting</p>
-      <main>
-        <form onClick={() => document.querySelector(".input-field").click()}>
-          <input
-            type="file"
-            accept="image/*"
-            className="input-field"
-            hidden
-            onChange={({ target: { files } }) => {
-              files[0] && setFileName(files[0].name);
-              if (files) {
-                setImage(URL.createObjectURL(files[0]));
-              }
-            }}
-          />
-          {image ? (
-            <img src={image} width={130} height={130} alt={fileName} />
-          ) : (
-            <>
-              <MdCloudUpload color="#1475cf" size={60} />
-              <p className="upload-p">Upload your photo</p>
-            </>
-          )}
-        </form>
-      </main>
+
       <Grid container justifyContent="space-between">
         <Grid item lg={5} sm={12}>
           <label htmlFor="name">Full name</label>
-          <input type="name" placeholder="Please enter your full name" />
+          <input
+            type="text"
+            placeholder="Full Name"
+            name="fullName"
+            onChange={handleChange}
+            value={data.fullName}
+            required
+          />
         </Grid>
         <Grid item lg={5} sm={12}>
           <label htmlFor="email">Email</label>
-          <input type="email" placeholder="Please enter your email" />
-        </Grid>
-        <Grid item lg={5} sm={12}>
-          <label htmlFor="name">Username</label>
-          <input type="name" placeholder="Please enter your username" />
+          <input
+            type="email"
+            placeholder="Email"
+            name="email"
+            onChange={handleChange}
+            value={data.email}
+            required
+          />
         </Grid>
         <Grid item lg={5} sm={12}>
           <label htmlFor="phone">Phone Number:</label>
           <input
-            type="tel"
-            id="phone"
-            name="phone"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            placeholder="Please enter your phone number"
+            type="number"
+            placeholder="Phone Number"
+            name="phoneNumber"
+            onChange={handleChange}
+            value={data.phoneNumber}
             required
           />
         </Grid>
@@ -63,10 +104,19 @@ function AccountForm() {
         className="acount-form-button"
       >
         <Grid item lg={4} sm={5}>
-          <button className="acount-form-button-one">Update Profile</button>
-          <button className="acount-form-button-two">Reset</button>
+          <button
+            className="acount-form-button-one"
+            onClick={handleUpdateProfile}
+            disabled={!Object.values(data).some((value) => value !== "")}
+          >
+            Update Profile
+          </button>
+          <button className="acount-form-button-two" onClick={handleReset}>
+            Reset
+          </button>
         </Grid>
       </Grid>
+      <ToastContainer />
     </div>
   );
 }

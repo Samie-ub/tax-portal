@@ -15,7 +15,7 @@ function AboutTeam() {
           </p>
         </Grid>
         <Grid item lg={11.9} sm={11.5}>
-          <Grid container justifyContent="space-evenly">
+          <Grid container justifyContent="space-evenly" className="text_align">
             <Grid item lg={3}>
               <img className="value_img" src="./Assets/team.svg" alt="" />
               <h3 className="value_h3">24/7 Support</h3>
