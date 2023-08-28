@@ -15,7 +15,14 @@ connection();
 
 // middlewares
 app.use(express.json());
-app.use(cors());
+const corsOpts = {
+    origin: '*',
+    credentials: true,
+    methods: ['GET','POST','HEAD','PUT','PATCH','DELETE'],
+    allowedHeaders: ['Content-Type'],
+    exposedHeaders: ['Content-Type']
+};
+app.use(cors(corsOpts));
 
 // routes
 app.use("/api/users", userRoutes);
