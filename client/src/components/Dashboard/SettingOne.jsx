@@ -29,7 +29,7 @@ function SettingOne() {
       }
 
       const response = await axios.post(
-        "/api/setting/change-password",
+        "https://tax-portal-backend.vercel.app/api/setting/change-password",
         {
           currentPassword: formData.currentPassword,
           newPassword: formData.newPassword,
