@@ -50,7 +50,6 @@ function SettingOne() {
         });
       } else {
         const data = await response.json();
-
         toast.error(data.message);
       }
     } catch (error) {
