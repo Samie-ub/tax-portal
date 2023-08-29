@@ -69,7 +69,7 @@ function Footer() {
       <Grid container justifyContent={"center"}>
         <Grid item xs={12} lg={12}>
           <div className="footer_container">
-            <div className="footer_text">
+            <div className="footer_text_2">
               <h2 className="footer-text-h2">
                 <span className="span-t">T</span> Tax Portal
               </h2>
@@ -107,28 +107,32 @@ function Footer() {
               </form>
             </div>
             <div className="footer_text row-direction">
-              <h4 className="footer-heding-two">Taxslayer Portal</h4>
-              <a href="#" className="footer-text-list">
-                Vission
-              </a>
-              <a href="#" className="footer-text-list">
-                Mission
-              </a>
-              <a href="#" className="footer-text-list">
-                About Us
-              </a>
-              <a href="#" className="footer-text-list">
-                News
-              </a>
-              <a href="#" className="footer-text-list">
-                Careers
-              </a>
-              <a href="#" className="footer-text-list">
-                Privacy Policy
-              </a>
-              <a href="#" className="footer-text-list">
-                Contact Us
-              </a>
+              <div className="header_block">
+                <h4 className="footer-heding-two">Taxslayer Portal</h4>
+              </div>
+              <div className="footer_text flex_wrap">
+                <a href="#" className="footer-text-list">
+                  Vision
+                </a>
+                <a href="#" className="footer-text-list">
+                  Mission
+                </a>
+                <a href="#" className="footer-text-list">
+                  About Us
+                </a>
+                <a href="#" className="footer-text-list">
+                  News
+                </a>
+                <a href="#" className="footer-text-list">
+                  Careers
+                </a>
+                <a href="#" className="footer-text-list">
+                  Privacy Policy
+                </a>
+                <a href="#" className="footer-text-list">
+                  Contact Us
+                </a>
+              </div>
             </div>
             <div className="footer-split">
               <h2 className="footer-heding-three">Contact Us</h2>
