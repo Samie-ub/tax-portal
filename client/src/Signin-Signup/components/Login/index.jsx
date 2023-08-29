@@ -14,7 +14,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://tax-portal-backend-fhsxt998n-samie-ub.vercel.app//api/auth";
+			const url = "https://tax-portal-backend-fhsxt998n-samie-ub.vercel.app/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("user",res.data)
 			localStorage.setItem("token", res.data);
