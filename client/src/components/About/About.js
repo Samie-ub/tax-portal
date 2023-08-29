@@ -11,10 +11,8 @@ function About() {
       <Navbar />
       <div className="about_container">
         <Grid container justifyContent="center">
-          <Grid item lg={11.5}> 
-     
-          
-          <Grid  className="conatine_one" container> 
+          <Grid item xs={11} sm={11} md={11} lg={11.5}>
+            <Grid className="conatine_one" container>
               <Grid item sm={12} lg={6}>
                 <p className="about_p">ABOUT TAX PAYER CENTRAL</p>
                 <p className="about_h1">
@@ -30,33 +28,42 @@ function About() {
                 </p>
               </Grid>
               <Grid item sm={12} lg={6}>
-                <img className="about_img_one" src="./Assets/about.avif" alt="" />
+                <img
+                  className="about_img_one"
+                  src="./Assets/about.avif"
+                  alt=""
+                />
               </Grid>
             </Grid>
-       
-         
-          <Grid container className="conatine_two">
+
+            <Grid container className="conatine_two">
               <Grid item sm={12} lg={6}>
-                <img className="about_img_one" src="./Assets/about2.avif" alt="" />
+                <img
+                  className="about_img_one"
+                  src="./Assets/about2.avif"
+                  alt=""
+                />
               </Grid>
               <Grid item sm={12} lg={6}>
                 <p className="about_p_two">OUR VISION</p>
                 <p className="about_h1_two">
-                We aim to make <br/>people life easier.
+                  We aim to make <br />
+                  people life easier.
                 </p>
                 <p className="about_two">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </Grid>
             </Grid>
-     
-          
           </Grid>
         </Grid>
       </div>
-      <AboutValue/>
-      <AboutTeam/>
-      <Footer/>
+      <AboutValue />
+      <AboutTeam />
+      <Footer />
     </>
   );
 }
