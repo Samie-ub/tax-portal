@@ -28,7 +28,6 @@ import Loader from "./components/loader/Loader";
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const user = localStorage.getItem("token");
-// Loader Effect
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false); // After 3 seconds, set isLoading to false
