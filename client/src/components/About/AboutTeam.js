@@ -8,8 +8,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 function AboutTeam() {
   return (
     <div className="about_team_section">
-      <Grid container>
-        <Grid item lg={11.5} sm={11.5} textAlign="center">
+      <Grid container justifyContent={"center"}>
+        <Grid item xs={11} sm={11.5} lg={11.5}  textAlign="center">
           <p className="team_heading">OUR TEAM</p>
           <p className="team_top">Meet These Fine Folks.</p>
           <p className="team_para">
@@ -17,7 +17,7 @@ function AboutTeam() {
             <br /> eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </Grid>
-        <Grid item lg={11.9} sm={11.5}>
+        <Grid item xs={11} sm={11.5} lg={11.9} >
           <Grid container justifyContent="space-evenly">
             <Grid item lg={3}>
               <img className="team_img" src="./Assets/men2.jpg" alt="" />
