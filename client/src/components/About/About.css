@@ -2,7 +2,7 @@
   padding-top: 8.5rem;
 }
 
-.text_align{
+.text_align {
   text-align: center;
 }
 .about_p {
@@ -78,58 +78,58 @@
   padding: 1rem;
   cursor: pointer;
 }
-/* AboutTeam css start here */
-/* .about_team_section{
-  width: 100%;
-  min-height: 100vh;
-} */
-.team_heading{
+
+.team_heading {
   color: #2a7cc7;
   font-weight: 500;
   padding-bottom: 1rem;
 }
-.team_top{
+.team_top {
   color: #243e63;
   font-size: 2.5rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
 }
-.team_para{
+.team_para {
   margin-bottom: 5rem;
   color: #8c8ba1;
   font-weight: 500;
-
 }
-.about_team_section{
+.about_team_section {
   padding-top: 5rem;
 }
-.team_img{
+.team_img {
   width: 100%;
   border-radius: 10px;
 }
-.team_founder{
+.team_founder {
   color: #2a7cc7;
   font-weight: 500;
   text-align: center;
   padding-bottom: 0.5rem;
 }
-.team_name{
+.team_name {
   text-align: center;
   font-weight: 600;
   padding-bottom: 2rem;
-
 }
-.team_icon_top{
+.team_icon_top {
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
 }
-.team_icon{
+.team_icon {
   color: #4f5e72;
   align-items: center;
   cursor: pointer;
   margin-right: 1rem;
 }
-.team_icon:hover{
+.team_icon:hover {
   color: #2a7cc7;
+}
+
+@media screen and (max-width: 965px) {
+  .about_container{
+    text-align: center;
+  }
 }
