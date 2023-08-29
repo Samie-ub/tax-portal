@@ -11,7 +11,7 @@ const Navbar = () => {
     <div className="header bg-color-primary">
       <nav className="navbar">
         <a href="/" className="logo">
-          <img src="./assets/logo.png" alt="" />
+          <img src="assets/logo.png" alt="" />
         </a>
         <div className="hamburger" onClick={handleClick}>
           {click ? (
