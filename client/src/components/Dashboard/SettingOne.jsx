@@ -43,6 +43,11 @@ function SettingOne() {
       
       if (response.status === 200) {
         toast.success("Password updated successfully");
+        setFormData({
+          currentPassword: "",
+          newPassword: "",
+          verifyPassword: "",
+        });
       } else {
         const data = await response.json();
 
