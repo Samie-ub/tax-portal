@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -23,12 +24,21 @@ import Support from "./components/Dashboard/Support";
 import Accounts from "./components/Dashboard/Accounts";
 import Form from "./components/Dashboard/FormSide/Form";
 import Session from "./components/session/Session";
+import Loader from "./components/loader/Loader";
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
   const user = localStorage.getItem("token");
-  console.log(user);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false); // After 3 seconds, set isLoading to false
+    }, 3000);
+
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <div className="App">
-      <>
+       {isLoading ? <Loader /> : <>
         <Router>
           {/* Navbar Routings */}
           <Routes>
@@ -72,7 +82,8 @@ function App() {
                 
           </Routes>
         </Router>
-      </>
+      </>}
+      
     </div>
   );
 }
