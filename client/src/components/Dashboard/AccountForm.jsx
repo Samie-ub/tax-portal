@@ -34,7 +34,7 @@ function AccountForm() {
         updatedData.phoneNumber = data.phoneNumber;
       }
       const response = await axios.put(
-        "/api/account/update-account",
+        "https://tax-portal-backend.vercel.app/api/account/update-account",
          updatedData, 
         {
           headers: {
