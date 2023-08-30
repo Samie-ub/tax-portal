@@ -34,7 +34,7 @@ function AccountForm() {
         updatedData.phoneNumber = data.phoneNumber;
       }
       const response = await axios.put(
-        "https://tax-portal-backend.vercel.app/api/account/update-account",
+        "/api/account/update-account",
          updatedData, 
         {
           headers: {
@@ -64,7 +64,7 @@ function AccountForm() {
       <p className="account-form-p">Account Setting</p>
 
       <Grid container justifyContent="space-between">
-        <Grid item lg={5} sm={12}>
+        <Grid item xs={12} lg={5} sm={12}>
           <label htmlFor="name">Full name</label>
           <input
             type="text"
@@ -75,7 +75,7 @@ function AccountForm() {
             required
           />
         </Grid>
-        <Grid item lg={5} sm={12}>
+        <Grid item xs={12} lg={5} sm={12}>
           <label htmlFor="email">Email</label>
           <input
             type="email"
@@ -86,7 +86,7 @@ function AccountForm() {
             required
           />
         </Grid>
-        <Grid item lg={5} sm={12}>
+        <Grid item xs={12} lg={5} sm={12}>
           <label htmlFor="phone">Phone Number:</label>
           <input
             type="number"
@@ -103,7 +103,7 @@ function AccountForm() {
         justifyContent="space-between"
         className="acount-form-button"
       >
-        <Grid item lg={4} sm={5}>
+        <Grid item xs={12} lg={4} sm={5}>
           <button
             className="acount-form-button-one"
             onClick={handleUpdateProfile}
