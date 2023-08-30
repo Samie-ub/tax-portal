@@ -34,7 +34,7 @@ function Step() {
                 <div>
                   <p className="step_register">Fill Form</p>
                   <p className="step_para">
-                  Enter your tax information online using  Phone Numbers.
+                    Enter your tax information online using Phone Numbers.
                   </p>
                 </div>
               </div>
@@ -45,7 +45,8 @@ function Step() {
                 <div>
                   <p className="step_register">Sign</p>
                   <p className="step_para">
-                  Electronically sign and file your return using using Email.</p>
+                    Electronically sign and file your return using using Email.
+                  </p>
                 </div>
               </div>
               <div className="step_content">
@@ -55,10 +56,10 @@ function Step() {
                 <div>
                   <p className="step_register">Download</p>
                   <p className="step_para">
-                  Print your return for recordkeeping using Phone Number.</p>
+                    Print your return for recordkeeping using Phone Number.
+                  </p>
                 </div>
               </div>
-             
             </Grid>
           </Grid>
         </Grid>
