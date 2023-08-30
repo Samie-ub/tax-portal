@@ -3,7 +3,8 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
 import { Grid } from "@mui/material";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Login = () => {
   const [data, setData] = useState({ email: "", password: "" });
   const [error, setError] = useState("");
@@ -26,7 +27,7 @@ const Login = () => {
         error.response.status >= 400 &&
         error.response.status <= 500
       ) {
-        setError(error.response.data.message);
+        toast.error(error.response.data.message);
       }
     }
   };
@@ -85,6 +86,7 @@ const Login = () => {
           </Link>
         </div>
       </div>
+        <ToastContainer />
     </div>
   );
 };
