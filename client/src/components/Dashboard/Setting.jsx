@@ -14,7 +14,7 @@ function Setting() {
         sx={{ justifyContent: { xs: "center", md: "space-between" } }}
         alignItems={"center"}
       >
-        <Grid item lg={2}>
+        <Grid item xs={0} lg={2}>
           <DashSidebar />
         </Grid>
         <Grid item xs={11} lg={9}>
