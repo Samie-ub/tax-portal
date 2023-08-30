@@ -1,6 +1,6 @@
-import React from 'react'
-import "./Services.css"
-import { Grid } from '@mui/material'
+import React from "react";
+import "./Services.css";
+import { Grid } from "@mui/material";
 function Feature() {
   const feature = [
     {
@@ -43,13 +43,18 @@ function Feature() {
   return (
     <div>
       <div className="feture_container">
-          <p className='feaure_heading'>FEATURES</p>
-          <p className='feaure_top'>We have Amazing <span className='feature_span'> Service.</span></p>
-      <p className='feture_para'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br/> eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      <Grid container justifyContent="space-evenly" className='feature'>
+        <p className="feaure_heading">FEATURES</p>
+        <p className="feaure_top">
+          We have Amazing <span className="feature_span"> Service.</span>
+        </p>
+        <p className="feture_para">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />{" "}
+          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <Grid container justifyContent="space-evenly" className="feature">
           {feature.map((e) => {
             return (
-              <Grid item lg={3.5}>
+              <Grid item xs={11} lg={3.5}>
                 <div className="content_img">
                   <img className="feature_img" src={e.featureImage} alt="" />
                 </div>
@@ -61,7 +66,7 @@ function Feature() {
         </Grid>
       </div>
     </div>
-  )
+  );
 }
 
-export default Feature
+export default Feature;
