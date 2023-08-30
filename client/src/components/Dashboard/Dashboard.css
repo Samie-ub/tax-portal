@@ -737,12 +737,7 @@ table tr th {
 .setting_form_main label {
   margin: 0;
 }
-.notification_main {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 1rem 3rem;
-  margin-top: rem;
-}
+
 .support_form_main {
   background-color: #fff;
   border-radius: 10px;
