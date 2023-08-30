@@ -15,9 +15,9 @@ import NotificationsIcon from "@mui/icons-material/Notifications";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import "./Navbar.css";
 import { Link, useNavigate } from "react-router-dom";
-import SettingsIcon from '@mui/icons-material/Settings';
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
-import AddHomeIcon from '@mui/icons-material/AddHome';
+import SettingsIcon from "@mui/icons-material/Settings";
+import ContactSupportIcon from "@mui/icons-material/ContactSupport";
+import AddHomeIcon from "@mui/icons-material/AddHome";
 const AppBar = styled(
   MuiAppBar,
   {}
@@ -105,11 +105,9 @@ export default function DashboardNav() {
       open={isMenuOpen}
       onClose={handleMenuClose}
     >
-        <Link to="/accounts">
-      <MenuItem onClick={handleMenuClose}>
-        My Account
-        </MenuItem>
-        </Link>
+      <Link to="/accounts">
+        <MenuItem onClick={handleMenuClose}>My Account</MenuItem>
+      </Link>
       <MenuItem onClick={handleLogout}>Log Out</MenuItem>
     </Menu>
   );
@@ -138,29 +136,7 @@ export default function DashboardNav() {
         </IconButton>
         <Link to="/">Home</Link>
       </MenuItem>
-      <MenuItem>
-        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={0} color="error">
-            <MailIcon />
-          </Badge>
-        </IconButton>
-        <p>Messages</p>
-      </MenuItem>
-      <MenuItem>
-        <IconButton
-          size="large"
-          aria-label="show 17 new notifications"
-          color="inherit"
-        >
-          <Badge badgeContent={0} color="error">
-            <NotificationsIcon />
-          </Badge>
-        </IconButton>
-        <Link to="/notification">Notifications</Link>
-      </MenuItem>
-     
 
-      
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -192,7 +168,6 @@ export default function DashboardNav() {
     </Menu>
   );
 
-
   return (
     <div className="dash_appbar">
       <Box sx={{ flexGrow: 1 }}>
@@ -208,7 +183,7 @@ export default function DashboardNav() {
               <MenuIcon className="menu_icon" />
             </IconButton>
             <Link to="/dashboard">
-            <img src="./Assets/logo.png" alt="logo" />
+              <img src="./Assets/logo.png" alt="logo" />
             </Link>
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
@@ -230,8 +205,7 @@ export default function DashboardNav() {
                   <NotificationsIcon />
                 </Badge>
               </IconButton>
-              <Link>
-              </Link>
+              <Link></Link>
               <IconButton
                 size="large"
                 edge="end"
