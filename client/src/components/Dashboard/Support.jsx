@@ -9,7 +9,6 @@ function Support() {
       <Grid sx={{ display: { xs: "block", md: "none" } }}>
         <DashboardNav />
       </Grid>
-
       <Grid
         container
         sx={{ justifyContent: { xs: "center", md: "space-between" } }}
