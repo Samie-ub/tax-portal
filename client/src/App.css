@@ -58,3 +58,9 @@ input[type="number"] {
     transform: rotate(360deg);
   }
 } 
+@media (min-width: 200px) and (max-width: 459px) {
+	.session_container {
+    text-align: center;
+    padding: 0 .5rem;
+  }
+  }
