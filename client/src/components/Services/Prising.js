@@ -1,6 +1,6 @@
-import React from 'react'
-import "./Services.css"
-import { Grid } from '@mui/material'
+import React from "react";
+import "./Services.css";
+import { Grid } from "@mui/material";
 function Prising() {
   const prising = [
     {
@@ -13,7 +13,7 @@ function Prising() {
       priceDownlod: "unlimited downloads",
       priceBasic: "Basic Assistanc",
       priceButton: "BUY NOW",
-      className:"blue"
+      className: "blue",
     },
     {
       priceHeading: "BUSINESS",
@@ -25,7 +25,7 @@ function Prising() {
       priceDownlod: "unlimited downloads",
       priceBasic: "Basic Assistanc",
       priceButton: "BUY NOW",
-      className:"red"
+      className: "red",
     },
     {
       priceHeading: "ENTERPRISE",
@@ -37,19 +37,17 @@ function Prising() {
       priceDownlod: "unlimited downloads",
       priceBasic: "Basic Assistanc",
       priceButton: "BUY NOW",
-      className:"white"
+      className: "white",
     },
-  ]
+  ];
   return (
-    <div className='prising_cont'>
-      <Grid container justifyContent="space-evenly" 
-      gap={4}
-      >
-          {prising.map((e) => {
-            return (
-              <Grid item sm={10} md={5} lg={3}>
-                <div className="price_card">
-                <p className='price_heading'>{e.priceHeading}</p>
+    <div className="prising_cont">
+      <Grid container justifyContent="space-evenly" gap={4}>
+        {prising.map((e) => {
+          return (
+            <Grid item xs={11} sm={10} md={5} lg={3}>
+              <div className="price_card">
+                <p className="price_heading">{e.priceHeading}</p>
                 <h3 className="price_total">{e.priceTotal}</h3>
                 <p className="price_month">{e.priceMonth}</p>
                 <p className="price_para">{e.pricePara}</p>
@@ -57,19 +55,16 @@ function Prising() {
                 <p className="price_para_one">{e.priceParaOne}</p>
                 <p className="price_downlod">{e.priceDownlod}</p>
                 <p className="price_basic">{e.priceBasic}</p>
-                <div className='pric_btn'>
-                <button className={e.className}>{e.priceButton}</button>
+                <div className="pric_btn">
+                  <button className={e.className}>{e.priceButton}</button>
                 </div>
-                </div>
-           
-
-              </Grid>
-            );
-          })}
-        </Grid>
-
+              </div>
+            </Grid>
+          );
+        })}
+      </Grid>
     </div>
-  )
+  );
 }
 
-export default Prising
+export default Prising;
