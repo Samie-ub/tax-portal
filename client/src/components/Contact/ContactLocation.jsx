@@ -4,7 +4,7 @@ function ContactLocation() {
   return (
     <div className="locaton_main">
       <Grid container justifyContent={"center"}>
-        <Grid item lg={11.5} sm={11.5} textAlign="center">
+        <Grid item xs={11} sm={11.5} lg={11.5}  textAlign="center">
           <p className="ourvalue_heading">Locations</p>
           <p className="ourvalue_top">Our Offices</p>
           <p className="value_text">
@@ -13,9 +13,9 @@ function ContactLocation() {
             aliqua.
           </p>
         </Grid>
-        <Grid item lg={11.9} sm={11.5}>
+        <Grid item xs={11} lg={11.9} sm={11.5}>
           <Grid container justifyContent="space-evenly">
-            <Grid item lg={3}>
+            <Grid item xs={12} lg={3}>
               <h3 className="location_h3">New York</h3>
               <p className="location_para">
                 40 Gates Court <br /> Endicott, NY 13760
