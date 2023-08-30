@@ -8,10 +8,14 @@ import AccountForm from "./AccountForm";
 function Accounts() {
   return (
     <div className="dashboard_main">
-      <DashboardNav />
-      <DashSidebar />
-      <Grid container justifyContent={"space-between"}>
-        <Grid item lg={2}></Grid>
+       <Grid sx={{ display: { xs: "block", md: "none" } }}>
+        <DashboardNav />
+      </Grid>
+      <Grid container justifyContent={"space-between"}
+      alignItems={"center"} >
+        <Grid item lg={2}>
+        <DashSidebar />
+        </Grid>
         <Grid item lg={9}>
          <AccountForm />
         </Grid>
