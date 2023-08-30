@@ -8,7 +8,9 @@ function Form() {
 
   return (
     <div className="status_main">
-      <DashboardNav />
+       <Grid sx={{ display: { xs: "block", md: "none" } }}>
+        <DashboardNav />
+      </Grid>
       <DashSidebar />
       <div className="tax_form_main">
         <Grid container justifyContent={"space-between"}>
