@@ -13,3 +13,10 @@ body{
   margin: 0;
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 965px) {
+  video
+  {
+    object-fit: contain;
+  }
+}
