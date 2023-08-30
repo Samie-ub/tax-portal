@@ -1,18 +1,18 @@
-import React, { useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import Navbar from "../Navbar/Navbar";
 import { Grid } from "@mui/material";
-import "./Contact.css"
+import "./Contact.css";
 import ContactLocation from "./ContactLocation";
-import Footer from '../footer/Footer'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import Footer from "../footer/Footer";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function Contact() {
   const showToastMessage = () => {
-    toast.success('Email Sucessfully Send !', {
-        position: toast.POSITION.TOP_RIGHT
+    toast.success("Email Sucessfully Send !", {
+      position: toast.POSITION.TOP_RIGHT,
     });
-};
+  };
   const formRef = useRef();
   const [showPopup, setShowPopup] = useState(false);
   const [form, setForm] = useState({
@@ -35,8 +35,8 @@ function Contact() {
     setLoading(true);
     emailjs
       .send(
-        'service_nh315n9',
-        'template_3cm5nxf',
+        "service_nh315n9",
+        "template_3cm5nxf",
         {
           from_name: form.name,
           to_name: "portaltax25",
@@ -45,7 +45,7 @@ function Contact() {
           message: form.message,
           subject: form.subject,
         },
-        '07bKgXU24wvSmXEnz'
+        "07bKgXU24wvSmXEnz"
       )
       .then(
         () => {
@@ -74,41 +74,82 @@ function Contact() {
       <Navbar />
 
       <div className="contact-top-container">
-      <form ref={formRef}
-          onSubmit={handleSubmit}>
-      <Grid container justifyContent="space-evenly">
-        <Grid item lg={5.5} sm={12} xs={12}>
-          <p className="contact-p-main">Contact Us</p>
-          <p className="contact-p-one">Feel free to get <span className="contact-p-span">in touch <br /> with us.</span> </p>
-          <p className="contact-p-two">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <input required
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}placeholder="Your Name" autoComplete="off" className="input-field"/>
-          <input required
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange} placeholder="Your Email" autoComplete="off" className="input-field"/>
-          <input name='subject'
-              value={form.subject}
-              required
-              onChange={handleChange} placeholder="Subject" autoComplete="off" className="input-field"/>
-          <textarea name='message'
-              value={form.message}
-              required
-              onChange={handleChange} className="textarea" placeholder="Your Message Here"></textarea>
-          <div className="contact-btton"> 
-          <button onClick={showToastMessage} className="contact-btton-one" type="submit" value="Send">Send</button>
-          <ToastContainer />
-          </div>
-        </Grid>
-        <Grid item lg={5.5} sm={12}>
-         <img src="./Assets/home.png" alt="contact" style={{width:"100%", marginTop:"2rem"}}/>
-        </Grid>
-      </Grid>
-      </form> 
+        <form ref={formRef} onSubmit={handleSubmit}>
+          <Grid
+            container
+            sx={{ justifyContent: { xs: "center", md: "space-evenly" } }}
+          >
+            <Grid item sm={11} xs={11} lg={5.5}>
+              <p className="contact-p-main">Contact Us</p>
+              <p className="contact-p-one">
+                Feel free to get{" "}
+                <span className="contact-p-span">
+                  in touch <br /> with us.
+                </span>{" "}
+              </p>
+              <p className="contact-p-two">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <input
+                required
+                type="text"
+                name="name"
+                value={form.name}
+                onChange={handleChange}
+                placeholder="Your Name"
+                autoComplete="off"
+                className="input-field"
+              />
+              <input
+                required
+                type="email"
+                name="email"
+                value={form.email}
+                onChange={handleChange}
+                placeholder="Your Email"
+                autoComplete="off"
+                className="input-field"
+              />
+              <input
+                name="subject"
+                value={form.subject}
+                required
+                onChange={handleChange}
+                placeholder="Subject"
+                autoComplete="off"
+                className="input-field"
+              />
+              <textarea
+                name="message"
+                value={form.message}
+                required
+                onChange={handleChange}
+                className="textarea"
+                placeholder="Your Message Here"
+              ></textarea>
+              <div className="contact-btton">
+                <button
+                  onClick={showToastMessage}
+                  className="contact-btton-one"
+                  type="submit"
+                  value="Send"
+                >
+                  Send
+                </button>
+                <ToastContainer />
+              </div>
+            </Grid>
+            <Grid item lg={5.5} sm={12}>
+              <img
+                className="contact_img"
+                src="./Assets/home.png"
+                alt="contact"
+                style={{ width: "100%", marginTop: "2rem" }}
+              />
+            </Grid>
+          </Grid>
+        </form>
       </div>
       <ContactLocation />
       <Footer />
