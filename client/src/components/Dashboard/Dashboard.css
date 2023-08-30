@@ -2,6 +2,8 @@
   background-color: #2a7cc74d;
   padding: 0 3rem 7px;
   height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .status_main {
@@ -68,7 +70,6 @@
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem 3rem;
-  margin-top: 7.1rem;
 }
 
 .form_header {
@@ -222,7 +223,7 @@
 }
 
 .form_sidebar_main {
-  padding: 6rem 0 1.6rem;
+  padding: 0 1.6rem;
   position: fixed;
 }
 
@@ -675,7 +676,6 @@ table tr th {
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem 3rem;
-  margin-top: 7.3rem;
 }
 .account_form_main input {
   border: 2px solid #2a7cc7;
@@ -684,6 +684,7 @@ table tr th {
   width: 100%;
   margin-bottom: 10px;
 }
+
 .acount-form-button {
   margin-top: 3rem;
 }
@@ -720,7 +721,6 @@ table tr th {
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem 3rem;
-  margin-top: 7.5rem;
 }
 .setting_heading {
   color: #a8abae;
@@ -747,7 +747,6 @@ table tr th {
   background-color: #fff;
   border-radius: 10px;
   padding: 1rem 3rem;
-  margin-top: 7.5rem;
 }
 .support_form_main input {
   border: 2px solid #2a7cc7;
@@ -770,5 +769,16 @@ table tr th {
 @media only screen and (max-width: 1354px) {
   .tabel_container {
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 965px) {
+  .account_form_main {
+    padding: 1rem;
+  }
+  .setting_form_main {
+    padding: 1rem;
+  }
+  .support_form_main {
+    padding: 1rem;
   }
 }
