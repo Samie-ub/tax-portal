@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Grid } from "@mui/material";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
-
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Signup = () => {
 	const [data, setData] = useState({
 		fullName: "",
@@ -34,70 +36,83 @@ const Signup = () => {
 				error.response.status >= 400 &&
 				error.response.status <= 500
 			) {
-				setError(error.response.data.message);
+				 toast.error(error.response.data.message);
 			}
 		}
 	};
 
 	return (
-		<div className={styles.signup_container}>
-			<div className={styles.signup_form_container}>
-				<div className={styles.left}>
-					<h1>Welcome Back</h1>
-					<Link to="/login">
-						<button type="button" className={styles.white_btn}>
-							Sign in
-						</button>
-					</Link>
-				</div>
-				<div className={styles.right}>
-					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Create Account</h1>
-						<input
-							type="text"
-							placeholder="Full Name"
-							name="fullName"
-							onChange={handleChange}
-							value={data.fullName}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="email"
-							placeholder="Email"
-							name="email"
-							onChange={handleChange}
-							value={data.email}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="number"
-							placeholder="Phone Number"
-							name="phoneNumber"
-							onChange={handleChange}
-							value={data.phoneNumber}
-							required
-							className={styles.input}
-						/>
-						<input
-							type="password"
-							placeholder="Password"
-							name="password"
-							onChange={handleChange}
-							value={data.password}
-							required
-							className={styles.input}
-						/>
-						{error && <div className={styles.error_msg}>{error}</div>}
-						{msg && <div className={styles.success_msg}>{msg}</div>}
-						<button type="submit" className={styles.green_btn}>
-							Sign Up
-						</button>
-					</form>
-				</div>
-			</div>
-		</div>
+		 <div className={styles.signup_container}>
+      <div className={styles.signup_form_container}>
+        <div className={styles.left}>
+          <h1>Welcome Back</h1>
+          <Link to="/login">
+            <button type="button" className={styles.white_btn}>
+              Sign in
+            </button>
+          </Link>
+        </div>
+        <div className={styles.right}>
+          <form className={styles.form_container} onSubmit={handleSubmit}>
+            <div className="logo">
+              <Link to={"/"}>
+                <img src="./Assets/logo.png" alt="" />
+              </Link>
+            </div>
+            <h1>Create Account</h1>
+            <input
+              type="text"
+              placeholder="Full Name"
+              name="fullName"
+              onChange={handleChange}
+              value={data.fullName}
+              required
+              className={styles.input}
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              name="email"
+              onChange={handleChange}
+              value={data.email}
+              required
+              className={styles.input}
+            />
+            <input
+              type="number"
+              placeholder="Phone Number"
+              name="phoneNumber"
+              onChange={handleChange}
+              value={data.phoneNumber}
+              required
+              className={styles.input}
+            />
+            <input
+              type="password"
+              placeholder="Password"
+              name="password"
+              onChange={handleChange}
+              value={data.password}
+              required
+              className={styles.input}
+            />
+            {error && <div className={styles.error_msg}>{error}</div>}
+            {msg && <div className={styles.success_msg}>{msg}</div>}
+            <button type="submit" className={styles.green_btn}>
+              Sign Up
+            </button>
+			<Grid sx={{ display: { xs: "block", md: "none" } }}>
+              <Link to="/login">
+                <button type="button" className={styles.white_btn}>
+                  Sign in
+                </button>
+              </Link>
+            </Grid>
+          </form>
+        </div>
+      </div>
+	  <ToastContainer />
+    </div>
 	);
 };
 
