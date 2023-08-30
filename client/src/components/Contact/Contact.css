@@ -2,24 +2,24 @@
   padding-top: 8rem;
 }
 .contact-p-main {
-  color: #2A7CC7;
+  color: #2a7cc7;
   font-size: 1rem;
   font-weight: 600;
   padding-top: 10px;
 }
 .contact-p-one {
-  color: #243E63;
+  color: #243e63;
   font-size: 3rem;
   font-weight: 800;
   padding-bottom: 1rem;
 }
 .contact-p-span {
-  color: #2A7CC7;
+  color: #2a7cc7;
   font-size: 3rem;
   font-weight: 800;
 }
 .contact-p-two {
-  color: #7C8BA1;
+  color: #7c8ba1;
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -27,7 +27,7 @@
   width: 80%;
   outline: 0;
   border: 0;
-  border-bottom: 2px solid #7C8BA1;
+  border-bottom: 2px solid #7c8ba1;
   padding: 10px 0;
   background: transparent;
   font-size: 1em;
@@ -36,7 +36,7 @@
   margin: 1rem 0;
 }
 .input-field::placeholder {
-  color: #787E86;
+  color: #787e86;
 }
 .input-field::placeholder-show ~ {
   font-size: 1em;
@@ -46,7 +46,7 @@
   width: 80%;
   outline: 0;
   border: 0;
-  border-bottom: 2px solid #7C8BA1;
+  border-bottom: 2px solid #7c8ba1;
   /* padding: 10px 0; */
   background: transparent;
   font-size: 1em;
@@ -63,7 +63,7 @@
 .contact-btton-one {
   width: 80%;
   border: none;
-  background-color: #2A7CC7;
+  background-color: #2a7cc7;
   color: #fff;
   padding: 1rem 0;
   border-radius: 5px;
@@ -72,25 +72,37 @@
   cursor: pointer;
 }
 .contact-btton-one:hover {
-  background-color: #4577A5;
+  background-color: #4577a5;
   transition: 0.5;
 }
 /* contact location start here */
-.locaton_main{
-    padding: 3rem 0;
-    text-align: center;
+.locaton_main {
+  padding: 3rem 0;
+  text-align: center;
 }
 .location_h3 {
   padding-top: 0.1rem;
-  color: #243E63;
+  color: #243e63;
   padding-bottom: 1rem;
 }
 .location_para {
-  color: #4F5E72;
+  color: #4f5e72;
   padding-bottom: 1.5rem;
   font-size: 1rem;
   font-weight: 500;
 }
 .location_text {
-  color: #A9AEC0;
+  color: #a9aec0;
+}
+
+@media screen and (max-width: 965px) {
+  .contact_img {
+    display: none;
+  }
+  .contact-top-container {
+    text-align: center;
+  }
+  .contact-btton {
+    justify-content: center;
+  }
 }
