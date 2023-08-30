@@ -58,10 +58,10 @@ function SettingOne() {
   };
 
   return (
-    <div className="setting_form_main">
+   <div className="setting_form_main">
       <h4 className="setting_heading">Change Password</h4>
       <Grid container justifyContent="start">
-        <Grid item lg={8} sm={12}>
+        <Grid item xs={12} lg={8} sm={12}>
           <label htmlFor="currentPassword">Current Password</label>
           <input
         type="password"
@@ -71,7 +71,7 @@ function SettingOne() {
         onChange={handleChange}
       />
         </Grid>
-        <Grid item lg={8} sm={12}>
+        <Grid item xs={12} lg={8} sm={12}>
           <label htmlFor="newPassword">New Password</label>
           <input
            type="password"
@@ -81,7 +81,7 @@ function SettingOne() {
            onChange={handleChange}
           />
         </Grid>
-        <Grid item lg={8} sm={12}>
+        <Grid item xs={12} lg={8} sm={12}>
           <label htmlFor="verifyPassword">Verify Password</label>
           <input
            type="password"
@@ -93,7 +93,7 @@ function SettingOne() {
         </Grid>
       </Grid>
       <Grid container justifyContent="center">
-        <Grid item lg={4} sm={5}>
+        <Grid item xs={8} lg={4} sm={5}>
           <button
             className="acount-form-button-one"
             onClick={handlePasswordChange}
