@@ -3,8 +3,10 @@
   padding: 0 3rem 7px;
   height: 100vh;
 }
+
 .status_main {
-  padding: 0 3rem 7px;
+  padding: 0 3rem;
+  height: 100%;
 }
 
 .align {
@@ -187,11 +189,6 @@
   margin: 0 1rem;
 }
 
-.tax_form_main {
-  background-color: #fff;
-  padding: 1rem;
-}
-
 .tax_form_heading_main {
   padding-top: 5.5rem;
 }
@@ -243,7 +240,7 @@
 }
 
 .status_form_main {
-  padding-top: 7.7rem;
+  padding-top: 1.5rem;
 }
 
 .status_heading h1 {
@@ -657,6 +654,13 @@ table tr th {
   }
   .form_main {
     padding: 1rem;
+  }
+  .status_form_main {
+    margin-top: 4rem;
+  }
+  .center {
+    display: flex;
+    flex-wrap: wrap-reverse;
   }
 }
 .account-form-p {
