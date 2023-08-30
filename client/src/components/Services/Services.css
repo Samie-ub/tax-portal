@@ -52,6 +52,7 @@
 /* Servrise Step section start here */
 .step_img {
   width: 100%;
+  height: 100vh;
 }
 .step_heading {
   color: #007bff;
