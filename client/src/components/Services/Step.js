@@ -6,7 +6,7 @@ function Step() {
     <div>
       <Grid container justifyContent="center">
         <Grid item lg={11.5}>
-          <Grid container>
+          <Grid container alignItems={"center"}>
             <Grid item sm={12} lg={5}>
               <img className="step_img" src="./Assets/girlser.svg" alt="girl" />
             </Grid>
