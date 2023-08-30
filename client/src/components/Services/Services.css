@@ -11,7 +11,7 @@
 /* Feture css start here */
 
 .feture_container {
-  padding: 1rem 5rem 3rem 5rem;
+  padding: 10rem 5rem 3rem 5rem;
   text-align: center;
 }
 .feaure_heading {
@@ -94,7 +94,7 @@
   padding-top: 5rem;
 }
 /* Prising Css start here */
-.prising_cont{
+.prising_cont {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
@@ -126,7 +126,6 @@
   background-color: #fff;
   /* margin: 1rem 0 0 1rem; */
   cursor: pointer;
-
 }
 .price_para {
   text-align: center;
@@ -163,7 +162,7 @@
   color: #a5b9d0;
   padding-bottom: 1rem;
   border-bottom: 1px solid #a5b9d0;
-   padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 .blue {
   padding: 10px 30px;
@@ -202,4 +201,21 @@
   display: flex;
   justify-content: center;
   padding-top: 2rem;
+}
+
+@media screen and (max-width: 965px) {
+  .feture_container {
+    padding: 8rem 1rem 1rem 1rem;
+  }
+  .step_img {
+    display: none;
+  }
+
+  .step_second {
+    padding: 2rem 1rem;
+  }
+
+  .step_register {
+    text-align: center;
+  }
 }
