@@ -58,3 +58,11 @@
 .success_msg {
 	background-color: #5cdd5c;
 }
+
+@media (min-width: 200px) and (max-width: 459px) {
+	.form_container {
+	  width: 100%;
+	  padding: 1rem;
+	  box-shadow: 0 0 0 0;
+	}
+  }
