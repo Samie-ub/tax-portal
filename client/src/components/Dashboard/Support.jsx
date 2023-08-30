@@ -1,21 +1,29 @@
-import React from 'react'
+import React from "react";
 import DashboardNav from "../Navbar/DashboardNav";
 import DashSidebar from "./DashSidebar";
 import { Grid } from "@mui/material";
-import SupportOne from './SupportOne';
+import SupportOne from "./SupportOne";
 function Support() {
   return (
     <div className="dashboard_main">
-    <DashboardNav />
-    <DashSidebar />
-    <Grid container justifyContent={"space-between"}>
-      <Grid item lg={2}></Grid>
-      <Grid item lg={9}>
-    <SupportOne />
+      <Grid sx={{ display: { xs: "block", md: "none" } }}>
+        <DashboardNav />
       </Grid>
-    </Grid>
-  </div>
-  )
+
+      <Grid
+        container
+        sx={{ justifyContent: { xs: "center", md: "space-between" } }}
+        alignItems={"center"}
+      >
+        <Grid item lg={2}>
+          <DashSidebar />
+        </Grid>
+        <Grid item xs={11} lg={9}>
+          <SupportOne />
+        </Grid>
+      </Grid>
+    </div>
+  );
 }
 
-export default Support
+export default Support;
