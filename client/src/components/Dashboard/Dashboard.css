@@ -766,6 +766,7 @@ table tr th {
     flex-wrap: wrap;
   }
 }
+/* media */
 @media screen and (max-width: 965px) {
   .account_form_main {
     padding: 1rem;
