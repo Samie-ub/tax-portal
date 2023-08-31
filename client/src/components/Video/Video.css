@@ -13,7 +13,7 @@ body{
   margin: 0;
   box-sizing: border-box;
 }
-
+/* media */
 @media screen and (max-width: 965px) {
   video
   {
