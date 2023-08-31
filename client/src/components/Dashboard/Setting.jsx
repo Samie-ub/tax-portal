@@ -5,6 +5,7 @@ import { Grid } from "@mui/material";
 import SettingOne from "./SettingOne";
 function Setting() {
   return (
+    // setting try
     <div className="dashboard_main">
       <Grid sx={{ display: { xs: "block", md: "none" } }}>
         <DashboardNav />
